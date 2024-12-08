@@ -3,7 +3,7 @@ const cvButton = document.querySelector('.download-btn');
 cvButton.addEventListener('click', (event) => {
     event.preventDefault();
     const link = document.createElement('a');
-    link.href = 'content/Ismail-Chakrane-CV.pdf';
+    link.href = './content/Ismail-Chakrane-CV.pdf';
     link.download = 'Ismail-Chakrane-CV.pdf';
     link.click();
 });
