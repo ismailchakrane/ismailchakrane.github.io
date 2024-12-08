@@ -1,0 +1,173 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    max-width: 800px; /* Limit the width of the content */
+    width: 100%;
+    margin: 0 auto; /* Center horizontally */
+    padding: 40px 20px; /* Add spacing inside the main */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add spacing between structured items */
+}
+
+main h1, main h2 {
+    font-size: 1.5em; /* Larger font for titles */
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1em;
+    line-height: 1.6; /* Better readability */
+    margin: 0 0 10px;
+}
+
+main a {
+    color: #888; /* Subtle link color */
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling code blocks */
+main pre, main code {
+    background-color: gray; /* Light gray background */
+    color: #fff; /* Dark text for readability */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace; /* Monospace font for code */
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Add spacing between content sections */
+main h1, main h2, main h3, main p {
+    margin-bottom: 10px;
+}
+
+/* Add a divider line between sections if needed */
+main hr {
+    border: 0;
+    height: .5px;
+    background: #a5a2a2;
+    margin: 20px 20px;
+}
+
+/* Header & Navigation */
+.site-header {
+    background: #000;
+    padding: 20px;
+    position: relative;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation Links */
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.nav-left a:first-child,
+.nav-right a:first-child {
+    margin-left: 0;
+}
+
+/* Search in the center */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    font-size: 1em;
+    background: #111;
+    color: #fff;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-btn {
+    background: #000;
+    color: #fff;
+    padding: 8px 14px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+
+.download-btn:hover {
+    background: #fff;
+    color: #000;      
+}
+
+/* footer */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    color: #fff;
+    background: #000;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+.footer-right a {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: inherit;
+    color: #fff;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
