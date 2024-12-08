@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 blogLink.style.color = "inherit";
                 blogContainer.appendChild(blogLink);
 
-                // Add horizontal rule
                 const hr = document.createElement("hr");
                 blogContainer.appendChild(hr);
 
@@ -54,9 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleRoute() {
         const hash = window.location.hash;
 
-        if (!hash || hash === "#/") {
-            loadMarkdownContent("content/whoami.md");
-        } else if (hash === "#/whoami") {
+        if (hash === "" || hash === "#/" || hash === "#/whoami") {
             loadMarkdownContent("content/whoami.md");
         } else if (hash === "#/blog") {
             loadBlogContent();
@@ -65,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loadMarkdownContent(`/content/blog/${blogFile}`);
         } else {
             const mainSection = document.querySelector("main");
-            mainSection.innerHTML = "<p>Page not found</p>";
+            mainSection.innerHTML = "<p>Page not found :)</p>";
         }
     }
 
