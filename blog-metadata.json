@@ -1,15 +1,8 @@
 [
-    {
-      "name": "test2.md",
-      "url": "content/blog/test2.md",
-      "snippet": "First 5 lines of test2.md content",
-      "created": "2024-12-05T12:00:00Z"
-    },
-    {
-      "name": "test.md",
-      "url": "content/blog/test.md",
-      "snippet": "First 5 lines of test.md content",
-      "created": "2024-12-05T12:00:00Z"
-    }
-  ]
-  
+  {
+    "name": "the_minimal_website.md",
+    "title": "the minimal website",
+    "summary": "Next...",
+    "modified": "2025-04-13T22:04:14.899Z"
+  }
+]
