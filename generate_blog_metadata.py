@@ -14,7 +14,7 @@ def generate_blog_metadata(blog_dir, output_file):
             lines = f.readlines()
             remaining = "".join(lines[2:]) if len(lines) > 2 else ""
             plain_text = remaining.replace("#", "")
-            summary = plain_text.strip()[:255]
+            summary = plain_text.strip()[:150]
         title = file_path.stem.replace("_", " ")
         metadata.append({
             "name": file_path.name,
