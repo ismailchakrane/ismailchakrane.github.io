@@ -9,9 +9,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading blog metadata for search:", err);
   }
 
+  function loadAboutContent() {
+    const main = document.querySelector("main");
+    main.innerHTML = `
+      <section class="about-me">
+        <h1>About Me</h1>
+        <p>Hi, I’m Ismail CHAKRANE—a Master’s student in AI at Claude Bernard Lyon 1, France.</p>
+        <p>My current motivation is to learn as much as I can in the field of Artificial Intelligence.</p>
+        <p>
+          Connect on 
+          <a href="https://www.linkedin.com/in/ismail-chakrane-aa668b1a0/" target="_blank">LinkedIn</a> 
+          or download my resume 
+          <a href="Ismail_CHAKRANE_cv.pdf" download>here</a>.
+        </p>
+      </section>
+    `;
+  }
+
   function handleRoute() {
     const hash = window.location.hash;
-    if (hash === "" || hash === "#/" || hash === "#/blog") {
+    if (hash === "" || hash === "#/") {
+      loadAboutContent();
+    } else if (hash === "#/blog") {
       loadBlogContent();
     } else if (hash.startsWith("#/blog/")) {
       const blogFile = hash.replace("#/blog/", "");
@@ -57,7 +76,9 @@ function capitalizeFirstLetter(str) {
 
 async function loadBlogContent() {
   try {
-    const blogs = allBlogs.slice().sort((a, b) => new Date(b.modified) - new Date(a.modified));
+    const blogs = allBlogs
+      .slice()
+      .sort((a, b) => new Date(b.modified) - new Date(a.modified));
     const mainSection = document.querySelector("main");
     mainSection.innerHTML = "";
     blogs.forEach((blog) => {
@@ -98,7 +119,7 @@ function initSearch() {
       searchResults.innerHTML = "";
       return;
     }
-    const matches = allBlogs.filter(blog =>
+    const matches = allBlogs.filter((blog) =>
       blog.title.toLowerCase().includes(query)
     );
     if (matches.length === 0) {

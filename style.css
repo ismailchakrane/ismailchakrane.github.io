@@ -34,10 +34,14 @@ html, body {
   }
   
   /* Ensure the mobile message is a proper paragraph */
+
   .mobile-message p {
     margin: 0;
     text-align: center;
+    max-width: 300px;
+    line-height: 1.5;
   }
+  
   
   /* Headings and Paragraphs in Main */
   main h1, main h2 {
